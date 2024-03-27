@@ -29,6 +29,8 @@ public class User {
 	private String email;
 	private String password;
 	
+	private boolean deleted;
+	
 	@CreatedDate
 	@Column(updatable = false)
 	private LocalDateTime createdAt;
@@ -58,6 +60,14 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	//***********************************
+	public boolean isDeleted() {
+		return deleted;
+	}
+	public void setDeleted(boolean deleted) {
+		this.deleted = deleted;
+	}
+	//*******************************************
 	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
